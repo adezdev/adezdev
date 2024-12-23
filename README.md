@@ -3,8 +3,6 @@
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=adezdev&label=Profile%20views&color=0e75b6&style=flat" alt="adezdev" /> </p>
 
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=adezdev&show_icons=true&locale=en&theme=dark" alt="adezdev" /></p>
-<p>&nbsp;<img align="center" src="https://api.githubtrends.io/user/svg/adezdev/repos?time_range=one_year&include_private=true&group=private&loc_metric=changed&theme=dark" alt="adezdev" /></p>
-<p>&nbsp;<img align="center" src="https://api.githubtrends.io/user/svg/adezdev/langs?include_private=true&compact=true&theme=dark" alt="adezdev" /></p>
 
 <h3 align="left">Languages and Tools:</h3>
 <p align="left">
