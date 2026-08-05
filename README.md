@@ -42,8 +42,8 @@ Built with TypeScript, Next.js, Drizzle ORM, and SQLite. Self-hosted, MIT licens
 
 ### Stats
 
-<img height="165" src="https://github-readme-stats.hackclub.dev/api?username=adezdev&show_icons=true&theme=default&hide_border=true&count_private=true" alt="adezdev's GitHub stats">
-<img height="165" src="https://github-readme-stats.hackclub.dev/api/top-langs/?username=adezdev&layout=compact&hide_border=true&theme=default" alt="Top languages">
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=adezdev&show_icons=true&theme=default&hide_border=true&count_private=true" alt="adezdev's GitHub stats">
+<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=adezdev&layout=compact&hide_border=true&theme=default" alt="Top languages">
 
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=adezdev&hide_border=true&theme=default" alt="adezdev's GitHub streak">
 
