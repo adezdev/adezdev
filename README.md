@@ -18,6 +18,27 @@ I did a year of computer science before dropping out to go all in on AI/ML, teac
 
 ### Currently building
 
+**secure_mesh** — private for now
+A decentralised, encrypted peer-to-peer overlay written from scratch in Rust. No libp2p, no TLS, no central servers or DNS.
+A node's address *is* its X25519 public key. Hand-rolled Noise IK, differentially tested against `snow` so the handshake is a checkable claim rather than a liability.
+
+</div>
+
+<div align="center">
+
+### Shipped
+
+**[elligator2](https://github.com/adezdev/elligator2)**
+Encode X25519 public keys as uniform random bit strings, and back — the trick that stops a protocol being fingerprinted by its own handshake.
+Built on formally verified field arithmetic, differentially tested against the Tor Project's implementation. `no_std`, no allocation, no unsafe.
+[crates.io](https://crates.io/crates/elligator2) · extracted from secure_mesh
+
+</div>
+
+<div align="center">
+
+### On pause
+
 **[fflags-tracker](https://github.com/adezdev/fflags-tracker)**
 A local-first Roblox FastFlag tracker. Browse, diff, and get notified when flags change, across 13 platforms.
 Built with TypeScript, Next.js, Drizzle ORM, and SQLite. Self-hosted, MIT licensed.
@@ -28,6 +49,7 @@ Built with TypeScript, Next.js, Drizzle ORM, and SQLite. Self-hosted, MIT licens
 
 ### Stack
 
+<img src="https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white" alt="Rust">
 <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
 <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js">
