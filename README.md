@@ -37,11 +37,12 @@ Built on formally verified field arithmetic, differentially tested against the T
 
 <div align="center">
 
-### On pause
+### Also maintaining
 
 **[fflags-tracker](https://github.com/adezdev/fflags-tracker)**
 A local-first Roblox FastFlag tracker. Browse, diff, and get notified when flags change, across 13 platforms.
 Built with TypeScript, Next.js, Drizzle ORM, and SQLite. Self-hosted, MIT licensed.
+Still actively maintained, as time allows.
 
 </div>
 
