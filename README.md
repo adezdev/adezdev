@@ -50,12 +50,12 @@ across 13 platforms. TypeScript, Next.js, SQLite. Self-hosted, MIT.
 ### Stats
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-sigma-five.vercel.app/api?username=adezdev&show_icons=true&hide_border=true&bg_color=00000000&theme=dark">
-  <img height="165" src="https://github-readme-stats-sigma-five.vercel.app/api?username=adezdev&show_icons=true&hide_border=true&bg_color=00000000&theme=default" alt="adezdev's GitHub stats">
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=adezdev&theme=github_dark">
+  <img height="200" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=adezdev&theme=github" alt="adezdev's GitHub stats">
 </picture>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=adezdev&layout=compact&hide_border=true&bg_color=00000000&theme=dark">
-  <img height="165" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=adezdev&layout=compact&hide_border=true&bg_color=00000000&theme=default" alt="Top languages">
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=adezdev&theme=github_dark">
+  <img height="200" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=adezdev&theme=github" alt="Top languages">
 </picture>
 
 <img src="https://komarev.com/ghpvc/?username=adezdev&label=Profile%20Views&color=000000&style=flat-square" alt="Profile views">
