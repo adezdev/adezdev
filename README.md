@@ -18,9 +18,10 @@ Dropped out a year into computer science to go all in on AI/ML, learning project
 
 ### Projects
 
-**secure_mesh** — *building · private*<br>
+**[secure_mesh](https://github.com/adezdev/secure_mesh)** — *building*<br>
 Encrypted peer-to-peer overlay in Rust, from scratch. No libp2p, no TLS, no servers.<br>
-A node's address *is* its X25519 public key.
+A node's address *is* its X25519 public key. Hand-rolled Noise IK, verified<br>
+byte-for-byte against an independent implementation. Not audited.
 
 **[elligator2](https://github.com/adezdev/elligator2)** — *shipped · [crates.io](https://crates.io/crates/elligator2)*<br>
 Makes X25519 public keys indistinguishable from random bytes, so a protocol can't be<br>
