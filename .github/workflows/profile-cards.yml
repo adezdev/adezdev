@@ -43,14 +43,47 @@ jobs:
         run: node scripts/generate-cards.mjs
 
       - name: Commit if changed
+        env:
+          # Same environment as the generate step: the retry below re-runs the
+          # generator, and it needs the token to do that.
+          GITHUB_TOKEN: ${{ secrets.PROFILE_TOKEN || secrets.GITHUB_TOKEN }}
+          INCLUDE_PRIVATE: 'false'
         run: |
           set -euo pipefail
-          if git diff --quiet -- profile; then
-            echo "cards unchanged; nothing to commit"
-            exit 0
-          fi
           git config user.name  'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add profile
-          git commit -m 'chore: refresh profile cards'
-          git push
+
+          # A plain `git push` loses to anything that lands on master between
+          # checkout and push — a human commit, or an overlapping run. That is
+          # not hypothetical: it happened, the job went red, and the only cost
+          # was a card one commit out of date, which is a bad trade for a red X
+          # sitting on the repository.
+          #
+          # Recovery is a reset rather than a rebase or a merge. The cards are
+          # *derived* files, so there is no work to preserve and nothing to
+          # reconcile: take whatever master now says, regenerate from live data
+          # on top of it, and try again. A merge conflict is impossible by
+          # construction, and the result is always the newest tree with the
+          # freshest numbers.
+          for attempt in 1 2 3; do
+            if git diff --quiet -- profile; then
+              echo "cards unchanged; nothing to commit"
+              exit 0
+            fi
+
+            git add profile
+            git commit -m 'chore: refresh profile cards'
+
+            if git push; then
+              echo "pushed on attempt ${attempt}"
+              exit 0
+            fi
+
+            echo "push rejected; master moved. Rebuilding on top of it."
+            git fetch origin
+            git reset --hard origin/master
+            node scripts/generate-cards.mjs
+          done
+
+          echo "::error::could not push after 3 attempts"
+          exit 1
