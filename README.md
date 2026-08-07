@@ -50,12 +50,12 @@ across 13 platforms. TypeScript, Next.js, SQLite. Self-hosted, MIT.
 ### Stats
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=adezdev&theme=github_dark">
-  <img height="200" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=adezdev&theme=github" alt="adezdev's GitHub stats">
+  <source media="(prefers-color-scheme: dark)" srcset="profile/stats-dark.svg">
+  <img height="200" src="profile/stats-light.svg" alt="adezdev's GitHub stats">
 </picture>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=adezdev&theme=github_dark">
-  <img height="200" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=adezdev&theme=github" alt="Top languages">
+  <source media="(prefers-color-scheme: dark)" srcset="profile/langs-dark.svg">
+  <img height="200" src="profile/langs-light.svg" alt="Language index">
 </picture>
 
 <img src="https://komarev.com/ghpvc/?username=adezdev&label=Profile%20Views&color=000000&style=flat-square" alt="Profile views">

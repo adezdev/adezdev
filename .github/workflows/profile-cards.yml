@@ -1,0 +1,56 @@
+name: Profile cards
+
+# Regenerates the SVGs under `profile/` and commits them when the numbers move.
+#
+# The point of doing this in CI rather than pointing the README at a live
+# service: the cards become files in this repository. Nothing third-party
+# renders on the profile, so no upstream can be paused, rate-limited, deprecated
+# in favour of a fork, or quietly handed to someone else.
+on:
+  schedule:
+    # Daily, at an off-peak minute. GitHub drops scheduled runs queued on the
+    # hour, and disables schedules entirely after 60 days without repository
+    # activity — a run that commits counts as activity, so this keeps itself
+    # alive as long as the numbers change.
+    - cron: '17 4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-cards
+  cancel-in-progress: false
+
+jobs:
+  cards:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate cards
+        env:
+          # Falls back to the default Actions token, which sees public data
+          # only. Set a `PROFILE_TOKEN` secret (PAT, `repo` scope) *and*
+          # INCLUDE_PRIVATE below to count private work — see the note in
+          # scripts/generate-cards.mjs on why that is opt-in.
+          GITHUB_TOKEN: ${{ secrets.PROFILE_TOKEN || secrets.GITHUB_TOKEN }}
+          INCLUDE_PRIVATE: 'false'
+        run: node scripts/generate-cards.mjs
+
+      - name: Commit if changed
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- profile; then
+            echo "cards unchanged; nothing to commit"
+            exit 0
+          fi
+          git config user.name  'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add profile
+          git commit -m 'chore: refresh profile cards'
+          git push
