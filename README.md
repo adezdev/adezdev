@@ -49,8 +49,14 @@ across 13 platforms. TypeScript, Next.js, SQLite. Self-hosted, MIT.
 
 ### Stats
 
-<img height="165" src="https://github-readme-stats-sigma-five.vercel.app/api?username=adezdev&show_icons=true&theme=default&hide_border=true&count_private=true" alt="adezdev's GitHub stats">
-<img height="165" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=adezdev&layout=compact&hide_border=true&theme=default" alt="Top languages">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-sigma-five.vercel.app/api?username=adezdev&show_icons=true&hide_border=true&bg_color=00000000&theme=dark">
+  <img height="165" src="https://github-readme-stats-sigma-five.vercel.app/api?username=adezdev&show_icons=true&hide_border=true&bg_color=00000000&theme=default" alt="adezdev's GitHub stats">
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=adezdev&layout=compact&hide_border=true&bg_color=00000000&theme=dark">
+  <img height="165" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=adezdev&layout=compact&hide_border=true&bg_color=00000000&theme=default" alt="Top languages">
+</picture>
 
 <img src="https://komarev.com/ghpvc/?username=adezdev&label=Profile%20Views&color=000000&style=flat-square" alt="Profile views">
 
